@@ -5,8 +5,8 @@ class Student:
 
     # Define the name and number when a student object is created
     def __init__(self, name, number):
-        self.name = str(name)      # Fix TypeError by converting to string
-        self.number = str(number)  # Fix TypeError by converting to string
+        self.name = str(name)
+        self.number = str(number)
         self.courses = {}
 
     # Return student name and number
@@ -21,7 +21,7 @@ class Student:
     def displayGPA(self):
         gpa = 0.0
         if len(self.courses) == 0:
-            return 'GPA of student ' + self.name + ' is 0.0'  # Fix ZeroDivisionError
+            return 'GPA of student ' + self.name + ' is 0.0'
         for course in self.courses.keys():
             gpa += self.courses[course]
         return 'GPA of student ' + self.name + ' is ' + str(gpa / len(self.courses))
